@@ -1,13 +1,17 @@
 # Terracotta UI
 
+A minimal collection of reusable CSS styles. 
+
 ## Develop
+
+Styles are housed in `terracotta-ui/`.
+
+To preview the styles:
 
 ```bash
 npm install
-npm run preview
+npm run dev
 ```
-
-The gallery is a Next.js app in `src/app/`. Each CSS file is a page. Changes hot-reload. Apps vendor the `terracotta-ui/` folder.
 
 ## Acknowledgements
 
