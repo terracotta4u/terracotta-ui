@@ -15,7 +15,7 @@
   border-radius: 0;
   background: var(--btn-bg);
   color: var(--btn-fg);
-  font: 400 0.875rem/1.25 system-ui, sans-serif;
+  font: var(--weight-regular) var(--text-sm)/var(--leading-tight) var(--font-sans);
   text-decoration: none;
   cursor: pointer;
 }

@@ -7,6 +7,7 @@ Apps copy this folder into their static assets. Do not edit those copies; change
 ## Design
 
 - **Color:** Palette in `css/colors.css`, light/dark roles in `css/theme.css`. Components use theme roles (`--bg`, `--tx`, `--ui`, `--bl`, `--re`, …), not raw `--blue-600`, except when a hover/active step needs a named scale stop.
+- **Type:** Raw stacks, sizes, and weights in `css/typography.css`. Use the `.type-*` roles (`display`, `heading`, `body`, `label`, `data`, `code`) instead of composing size/weight utilities. Components use those tokens, not hardcoded `rem` or `system-ui`.
 - **Components:** Square corners, 1px borders, no shadow, compact 14px type, 48px controls, even padding. One size and a few classes until an app needs more.
 
 ## Layout

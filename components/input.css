@@ -2,7 +2,7 @@
   display: block;
   margin-bottom: var(--space-2);
   color: var(--tx-2);
-  font: 400 0.75rem/1.25 system-ui, sans-serif;
+  font: var(--weight-regular) var(--text-xs)/var(--leading-tight) var(--font-sans);
 }
 
 .input {
@@ -16,7 +16,7 @@
   border-radius: 0;
   background: var(--bg-2);
   color: var(--tx);
-  font: 400 0.875rem/1.25 system-ui, sans-serif;
+  font: var(--weight-regular) var(--text-sm)/var(--leading-tight) var(--font-sans);
 }
 
 .input::placeholder {
@@ -52,7 +52,7 @@ textarea.input {
 .hint,
 .error {
   margin: var(--space-1) 0 0;
-  font: 400 0.75rem/1.25 system-ui, sans-serif;
+  font: var(--weight-regular) var(--text-xs)/var(--leading-tight) var(--font-sans);
 }
 
 .hint {
