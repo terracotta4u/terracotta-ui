@@ -1,0 +1,43 @@
+.choice {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  min-block-size: var(--space-12);
+  color: var(--tx);
+  font: var(--weight-regular) var(--text-sm)/var(--leading-tight) var(--font-sans);
+  cursor: pointer;
+}
+
+.choice input {
+  inline-size: 1rem;
+  block-size: 1rem;
+  margin: 0;
+  accent-color: var(--bl);
+  cursor: pointer;
+}
+
+.choice input[type="checkbox"] {
+  border-radius: 0;
+}
+
+.choice input:focus-visible {
+  outline: 2px solid var(--bl);
+  outline-offset: 2px;
+}
+
+.choice:has(:disabled) {
+  color: var(--tx-3);
+  cursor: not-allowed;
+}
+
+.choice:has(:disabled) input {
+  cursor: not-allowed;
+}
+
+.choice:has([aria-invalid="true"]) input {
+  accent-color: var(--re);
+}
+
+.choice:has([aria-invalid="true"]) input:focus-visible {
+  outline-color: var(--re);
+}

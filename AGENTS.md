@@ -6,20 +6,23 @@ Apps copy this folder into their static assets. Do not edit those copies; change
 
 ## Design
 
-- **Color:** Palette in `css/colors.css`, light/dark roles in `css/theme.css`. Components use theme roles (`--bg`, `--tx`, `--ui`, `--bl`, `--re`, …), not raw `--blue-600`, except when a hover/active step needs a named scale stop.
-- **Type:** Raw stacks, sizes, and weights in `css/typography.css`. Use the `.type-*` roles (`display`, `heading`, `body`, `label`, `data`, `code`) instead of composing size/weight utilities. Components use those tokens, not hardcoded `rem` or `system-ui`.
-- **Components:** Square corners, 1px borders, no shadow, compact 14px type, 48px controls, even padding. One size and a few classes until an app needs more.
+- **Color:** Palette in `css/colors.css`, light/dark roles in `css/theme.css`. Controls use theme roles (`--bg`, `--tx`, `--ui`, `--bl`, `--re`, …), not raw `--blue-600`, except when a hover/active step needs a named scale stop.
+- **Type:** Raw stacks, sizes, and weights in `css/typography.css`. Use the `.type-*` roles (`display`, `heading`, `body`, `label`, `data`, `code`) instead of composing size/weight utilities.
+- **Controls:** Square corners, 1px borders, no shadow, compact type, 48px where it’s a control, even padding. Default / hover / focus / disabled (and error on fields). One size until an app needs a smaller pair.
+- **Buttons:** `.btn`, `.btn-secondary`, `.btn-ghost`, `.btn-danger`. Do not add sizes or extra variants until an app needs them.
+- **Fields:** `input`, `textarea`, and `select` share `.input` until they need to look different.
+- **Icons:** 16px, `currentColor`. No icon pack in this repo.
+
+Do not add cards, panels, tabs, nav, tables, or other product chrome here. If an app repeats a structure, promote that structure into `components/`.
 
 ## Layout
 
 ```
 terracotta.css          # barrel; apps link this one file
-css/                    # tokens and layout utilities
-components/             # one file per control
+css/                    # foundations: color, theme, type, space, layout, grid
+components/             # primitives: button, input, and other boring controls
 ```
 
-Add a new control as `components/<name>.css` and `@import` it from `terracotta.css`.
+Add a new primitive as `components/<name>.css` and `@import` it from `terracotta.css`.
 
-## Consuming apps
-
-Drop this folder into static assets and link `terracotta.css`. App-specific styles stay in the app (`app.css`, etc.). Updates are a folder replace from a tagged revision.
+App-specific styles stay in the app.
