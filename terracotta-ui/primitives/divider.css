@@ -1,6 +1,0 @@
-hr,
-.divider {
-  margin-block: var(--space-4);
-  border: 0;
-  border-block-start: 1px solid var(--ui);
-}

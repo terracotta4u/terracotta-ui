@@ -1,11 +1,6 @@
-@import url("foundations/colors.css");
-@import url("foundations/grid.css");
-@import url("foundations/layout.css");
-@import url("foundations/spacing.css");
-@import url("foundations/theme.css");
-@import url("foundations/typography.css");
-@import url("primitives/button.css");
-@import url("primitives/input.css");
-@import url("primitives/link.css");
-@import url("primitives/choice.css");
-@import url("primitives/divider.css");
+@import url("colors.css");
+@import url("grid.css");
+@import url("layout.css");
+@import url("spacing.css");
+@import url("theme.css");
+@import url("typography.css");
