@@ -6,8 +6,8 @@ Apps copy that folder into their static assets. Do not edit those copies; change
 
 ## Design
 
-- **Color:** Palette in `terracotta-ui/css/colors.css`, light/dark roles in `terracotta-ui/css/theme.css`. Controls use theme roles (`--bg`, `--tx`, `--ui`, `--bl`, `--re`, …), not raw `--blue-600`, except when a hover/active step needs a named scale stop.
-- **Type:** Raw stacks, sizes, and weights in `terracotta-ui/css/typography.css`. Use the `.type-*` roles (`display`, `heading`, `body`, `label`, `data`, `code`) instead of composing size/weight utilities.
+- **Color:** Palette in `terracotta-ui/foundations/colors.css`, light/dark roles in `terracotta-ui/foundations/theme.css`. Controls use theme roles (`--bg`, `--tx`, `--ui`, `--bl`, `--re`, …), not raw `--blue-600`, except when a hover/active step needs a named scale stop.
+- **Type:** Raw stacks, sizes, and weights in `terracotta-ui/foundations/typography.css`. Use the `.type-*` roles (`display`, `heading`, `body`, `label`, `data`, `code`) instead of composing size/weight utilities.
 - **Controls:** Square corners, 1px borders, no shadow, compact type, 48px where it’s a control, even padding. Default / hover / focus / disabled (and error on fields). One size until an app needs a smaller pair.
 - **Buttons:** `.btn`, `.btn-secondary`, `.btn-ghost`, `.btn-danger`. Do not add sizes or extra variants until an app needs them.
 - **Fields:** `input`, `textarea`, and `select` share `.input` until they need to look different.
@@ -18,12 +18,12 @@ Do not add cards, panels, tabs, nav, tables, or other product chrome here. If an
 ## Layout
 
 ```
-terracotta-ui/terracotta.css  # barrel; apps link this one file
-terracotta-ui/css/            # foundations: color, theme, type, space, layout, grid
-terracotta-ui/components/     # primitives: button, input, and other boring controls
-src/app/                      # local Next.js gallery; not part of the kit
+terracotta-ui/terracotta.css     # barrel; apps link this one file
+terracotta-ui/foundations/       # tokens and layout utilities
+terracotta-ui/primitives/        # one control, one job
+src/app/                         # local Next.js gallery; not part of the kit
 ```
 
-Add a new primitive as `terracotta-ui/components/<name>.css` and `@import` it from `terracotta-ui/terracotta.css`.
+Add a new primitive as `terracotta-ui/primitives/<name>.css` and `@import` it from `terracotta-ui/terracotta.css`.
 
 App-specific styles stay in the app.

@@ -2,7 +2,7 @@ import { Page } from "../page-ui";
 
 export default function LayoutPage() {
   return (
-    <Page title="Layout" file="css/layout.css">
+    <Page title="Layout" file="foundations/layout.css">
       <p className="type-label">stack</p>
       <div className="stack gap-2">
         <p className="type-body">One</p>

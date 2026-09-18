@@ -2,7 +2,7 @@ import { Page } from "../page-ui";
 
 export default function ButtonPage() {
   return (
-    <Page title="Button" file="components/button.css">
+    <Page title="Button" file="primitives/button.css">
       <div className="cluster">
         <button className="btn" type="button">
           Save

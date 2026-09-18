@@ -6,7 +6,7 @@ const accents2 = ["--re-2", "--or-2", "--ye-2", "--gr-2", "--cy-2", "--bl-2", "-
 
 export default function ThemePage() {
   return (
-    <Page title="Theme" file="css/theme.css">
+    <Page title="Theme" file="foundations/theme.css">
       <p className="type-body">
         Roles follow the OS, Light, or Dark. Press{" "}
         <span className="type-data">D</span> to toggle Light and Dark. Set{" "}

@@ -2,7 +2,7 @@ import { Page } from "../page-ui";
 
 export default function ChoicePage() {
   return (
-    <Page title="Choice" file="components/choice.css">
+    <Page title="Choice" file="primitives/choice.css">
       <label className="choice">
         <input type="checkbox" defaultChecked />
         Remember me

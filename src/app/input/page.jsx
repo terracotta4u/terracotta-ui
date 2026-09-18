@@ -2,7 +2,7 @@ import { Page } from "../page-ui";
 
 export default function InputPage() {
   return (
-    <Page title="Input" file="components/input.css">
+    <Page title="Input" file="primitives/input.css">
       <div className="stack gap-2">
         <label className="label" htmlFor="name">
           Name

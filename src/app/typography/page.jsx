@@ -2,7 +2,7 @@ import { Page } from "../page-ui";
 
 export default function TypographyPage() {
   return (
-    <Page title="Typography" file="css/typography.css">
+    <Page title="Typography" file="foundations/typography.css">
       <p className="type-display">Display</p>
       <p className="type-heading">Heading</p>
       <p className="type-body">

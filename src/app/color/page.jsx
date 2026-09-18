@@ -5,7 +5,7 @@ const hues = ["base", "red", "orange", "yellow", "green", "cyan", "blue", "purpl
 
 export default function ColorPage() {
   return (
-    <Page title="Color" file="css/colors.css">
+    <Page title="Color" file="foundations/colors.css">
       <div className="row gap-3">
         <div className="col-6 col-sm-3">
           <Swatch token="--paper" />
