@@ -1,27 +1,34 @@
 # Terracotta UI
 
-A minimal collection of reusable CSS styles. 
+A minimal collection of reusable CSS styles.
+
+## Use
+
+Apps take `terracotta.css` from a GitHub release. Link that one file. Do not edit it.
+
+```bash
+curl -fsSL -o terracotta.css \
+  https://github.com/terracotta4u/terracotta-ui/releases/latest/download/terracotta.css
+```
+
+Put it with the app’s static CSS and replace it when you move to a new tag.
 
 ## Develop
 
-Styles are housed in `terracotta-ui/`.
-
-To preview the styles:
+Edit the split files in `terracotta-ui/`. Preview:
 
 ```bash
 npm install
 npm run dev
 ```
 
-## Deploy
-
-To bundle the kit into one file for apps:
+Bundle for apps:
 
 ```bash
 npm run build
 ```
 
-That writes `dist/terracotta.css`. Edit the split files in `terracotta-ui/`; do not edit `dist/`.
+That writes `dist/terracotta.css`. Do not edit `dist/`.
 
 ## Acknowledgements
 

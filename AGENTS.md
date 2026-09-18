@@ -1,8 +1,8 @@
 # Terracotta UI
 
-This repo is the source for the Terracotta CSS kit. Edit files in `terracotta-ui/`.
+This repo is the source for the Terracotta CSS kit. Edit files in `terracotta-ui/`, then run `npm run build`.
 
-Apps copy that folder into their static assets. Do not edit those copies; change the kit here and replace the folder.
+Apps take `dist/terracotta.css` from a tagged GitHub release. Do not edit that file; change the kit here, rebuild, retag, and replace the copy.
 
 ## Design
 
@@ -18,10 +18,11 @@ Do not add cards, panels, tabs, nav, tables, or other product chrome here. If an
 ## Layout
 
 ```
-terracotta-ui/terracotta.css     # barrel; apps link this one file
+terracotta-ui/terracotta.css     # barrel; build inlines this
 terracotta-ui/foundations/       # tokens and layout utilities
 terracotta-ui/primitives/        # one control, one job
 src/app/                         # local Next.js gallery; not part of the kit
+dist/terracotta.css              # generated; apps take this file
 ```
 
 Add a new primitive as `terracotta-ui/primitives/<name>.css` and `@import` it from `terracotta-ui/terracotta.css`.
