@@ -1,28 +1,29 @@
 # Terracotta UI
 
-This repo is the source for the Terracotta CSS kit. Edit files here.
+This repo is the source for the Terracotta CSS kit. Edit files in `terracotta-ui/`.
 
-Apps copy this folder into their static assets. Do not edit those copies; change the kit here and replace the folder.
+Apps copy that folder into their static assets. Do not edit those copies; change the kit here and replace the folder.
 
 ## Design
 
-- **Color:** Palette in `css/colors.css`, light/dark roles in `css/theme.css`. Controls use theme roles (`--bg`, `--tx`, `--ui`, `--bl`, `--re`, …), not raw `--blue-600`, except when a hover/active step needs a named scale stop.
-- **Type:** Raw stacks, sizes, and weights in `css/typography.css`. Use the `.type-*` roles (`display`, `heading`, `body`, `label`, `data`, `code`) instead of composing size/weight utilities.
+- **Color:** Palette in `terracotta-ui/css/colors.css`, light/dark roles in `terracotta-ui/css/theme.css`. Controls use theme roles (`--bg`, `--tx`, `--ui`, `--bl`, `--re`, …), not raw `--blue-600`, except when a hover/active step needs a named scale stop.
+- **Type:** Raw stacks, sizes, and weights in `terracotta-ui/css/typography.css`. Use the `.type-*` roles (`display`, `heading`, `body`, `label`, `data`, `code`) instead of composing size/weight utilities.
 - **Controls:** Square corners, 1px borders, no shadow, compact type, 48px where it’s a control, even padding. Default / hover / focus / disabled (and error on fields). One size until an app needs a smaller pair.
 - **Buttons:** `.btn`, `.btn-secondary`, `.btn-ghost`, `.btn-danger`. Do not add sizes or extra variants until an app needs them.
 - **Fields:** `input`, `textarea`, and `select` share `.input` until they need to look different.
 - **Icons:** 16px, `currentColor`. No icon pack in this repo.
 
-Do not add cards, panels, tabs, nav, tables, or other product chrome here. If an app repeats a structure, promote that structure into `components/`.
+Do not add cards, panels, tabs, nav, tables, or other product chrome here. If an app repeats a structure, promote that structure into `terracotta-ui/components/`.
 
 ## Layout
 
 ```
-terracotta.css          # barrel; apps link this one file
-css/                    # foundations: color, theme, type, space, layout, grid
-components/             # primitives: button, input, and other boring controls
+terracotta-ui/terracotta.css  # barrel; apps link this one file
+terracotta-ui/css/            # foundations: color, theme, type, space, layout, grid
+terracotta-ui/components/     # primitives: button, input, and other boring controls
+src/app/                      # local Next.js gallery; not part of the kit
 ```
 
-Add a new primitive as `components/<name>.css` and `@import` it from `terracotta.css`.
+Add a new primitive as `terracotta-ui/components/<name>.css` and `@import` it from `terracotta-ui/terracotta.css`.
 
 App-specific styles stay in the app.

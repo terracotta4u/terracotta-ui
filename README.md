@@ -1,5 +1,13 @@
 # Terracotta UI
 
+## Develop
+
+```bash
+npm install
+npm run preview
+```
+
+The gallery is a Next.js app in `src/app/`. Each CSS file is a page. Changes hot-reload. Apps vendor the `terracotta-ui/` folder.
 
 ## Acknowledgements
 

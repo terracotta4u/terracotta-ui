@@ -1,0 +1,12 @@
+{
+  "name": "terracotta-ui",
+  "private": true,
+  "scripts": {
+    "preview": "next dev"
+  },
+  "devDependencies": {
+    "next": "^15",
+    "react": "^19",
+    "react-dom": "^19"
+  }
+}
